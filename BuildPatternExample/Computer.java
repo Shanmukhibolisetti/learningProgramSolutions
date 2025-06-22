@@ -2,14 +2,12 @@ package learningProgramSolutions.BuildPatternExample;
 
 public class Computer {
 
-    // Required and optional attributes
     private final String cpu;
     private final String ram;
     private final String storage;
     private final String graphicsCard;
     private final String operatingSystem;
 
-    // Private constructor
     private Computer(Builder builder) {
         this.cpu = builder.cpu;
         this.ram = builder.ram;
@@ -18,14 +16,13 @@ public class Computer {
         this.operatingSystem = builder.operatingSystem;
     }
 
-    // Getters for demonstration
+
     public String getCpu() { return cpu; }
     public String getRam() { return ram; }
     public String getStorage() { return storage; }
     public String getGraphicsCard() { return graphicsCard; }
     public String getOperatingSystem() { return operatingSystem; }
 
-    // Display configuration
     public void displayConfiguration() {
         System.out.println("Computer Configuration:");
         System.out.println("CPU: " + cpu);
@@ -36,7 +33,6 @@ public class Computer {
         System.out.println();
     }
 
-    // Static nested Builder class
     public static class Builder {
         private String cpu;
         private String ram;
